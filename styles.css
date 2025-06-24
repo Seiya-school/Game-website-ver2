@@ -64,11 +64,11 @@ span{
 }
 
 .text_container{
-  flex: 2;
-  min-width: 360px;
+  flex: 3;
+  min-width: 37em;
 }
 
 .info_visuals{
-  flex: 1;
+  flex: 2;
   width: auto;
 }
