@@ -5,6 +5,15 @@
   box-sizing: border-box;
 }
 
+:root{
+  --c_bg: #0b0b0b;
+  --c_bg2: #04101a;
+  --c_text: white;
+  --c_accent: #F35B12;
+
+  --skew-angle: 30deg;
+}
+
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=WDXL+Lubrifont+JP+N&display=swap');
 
@@ -14,12 +23,37 @@ body {
   font-weight: 400;
   font-style: normal;
 
-  background-color: black;
+  background-color: var(--c_bg);
   color: white;
 }
 
 h2{
+  font-size: 3em;
+  padding: 0px;
+  margin: 0.5em;
+  line-height: 0;
+
+  color: var(--c_accent);
+  font-style: italic;
+  text-shadow: 4px 4px color-mix(in hsl, var(--c_accent), #0f0000 85%);
+}
+
+span{
   display: inline-block;
+  background: linear-gradient(to right, #000000ae, #00000034);
+
+  transform: skew(calc(-1 * var(--skew-angle)));
+  width: auto;
+  height: auto;
+  padding: 4px 4px; 
+  
+  margin: 12px;
+  margin-left: 24px;
+  margin-bottom: 0px;
+}
+
+.unskewed{
+  transform: skew(var(--skew-angle));
 }
 
 .info_container{
