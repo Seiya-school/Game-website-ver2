@@ -56,19 +56,26 @@ span{
   transform: skew(var(--skew-angle));
 }
 
+p{
+  font-size: 2rem;
+  margin-left: 0.5em;
+}
+
 .info_container{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   background: linear-gradient(color-mix(in hsl, var(--c_bg), var(--c_bg2) 50%), color-mix(in hsl, var(--c_bg), var(--c_bg2) 100%));
+
+  margin-top: 2rem;
 }
 
 .text_container{
   flex: 3;
-  min-width: 37em;
+  min-width: 37rem;
 }
 
 .info_visuals{
-  flex: 2;
+  height: 360px;
   width: auto;
 }
