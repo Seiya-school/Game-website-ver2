@@ -6,11 +6,11 @@
   /* border: 1px solid red; */
 }
 
-/* *{
+*{
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-} */
+}
 
 :root{
   --c_bg: #0b0b0b;
@@ -29,7 +29,7 @@
 header {
   background: url("banner.jpg") no-repeat top center;
   height: auto;
-  padding: 1rem;
+  padding-top: 1rem;
   padding-bottom: 10rem;
   display: inline-block;
 }
@@ -50,7 +50,7 @@ body {
   color: white;
 }
 
-.kanji_container{
+#kanji_container{
   display: flex;
   flex-direction: column;
   float: left;
@@ -75,92 +75,100 @@ body {
   margin-right: 2rem;
 }
 
+#hero_header{
+  font-size: 3rem;
+  padding: 48px 0px;
+}
+
 .hero_text{
   font-size: 3rem;
   text-shadow: 2px 2px 5px #000;
+  margin-bottom: 48px;
 }
 
 
-.fade{
+#fade{
   background: linear-gradient(rgba(52, 42, 42, 0), var(--c_bg));
-  height: 320px;
-  margin: 0 0;
+
+  height: 44vh;
 }
 
 .links_container{
-  display: inline-flex;
   font-size: 1rem;
+  display: inline-grid;
+  grid-auto-rows: 1 / 2;
 }
 
 button span{
   position: relative;
 	z-index: 2;
 }
-  button{
-    position: relative;
-    font-size: 2rem;
-    color: var(--c_accent);
-    background-color: white;
-    border: 4px, solid, var(--c_accent);
-    border-radius: 0.5rem;
-    padding: 1rem 2rem;
+
+button{
+  position: relative;
+  font-size: 2rem;
+  color: var(--c_accent);
+  background-color: white;
+  border: 4px, solid, var(--c_accent);
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
 
 
-    transition-duration: 0.3s;
-    cursor: pointer;
-    /* overflow: hidden; */
-  }
+  transition-duration: 0.3s;
+  cursor: pointer;
+  /* overflow: hidden; */
+}
 
-  button:hover{
-    box-shadow: 10px 10px 10px #000; 
-    transform: translateY(-10px);
-    background-color: var(--c_accent);
-    color: white;
-    border: 4px solid white;
+button:hover{
+  box-shadow: 10px 10px 10px #000; 
+  transform: translateY(-10px);
+  background-color: var(--c_accent);
+  color: white;
+  border: 4px solid white;
 
-  }
+}
 
-  button:after{
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 0;
-    width: 100%;
-    height: 0;
-    border: 0;
-    background-color: var(--c_accent);
-    transition-duration: 0.3s;
+button:after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  width: 100%;
+  height: 0;
+  border: 0;
+  background-color: var(--c_accent);
+  transition-duration: 0.3s;
 
-  }
+}
 
-  button:hover:after{
-    height: 100%;
-  }
+button:hover:after{
+  height: 100%;
+}
 
-  button:before{
-    pointer-events: none;
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 0;
-    width: calc(100% + 4rem);
-    height: calc(100% + 4rem);
-    border-radius: 0.5rem;
-    border: 5px solid var(--c_accent);
-    opacity: 0;
-    transition: 0.3s ease-out;
-  }
+button:before{
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  width: calc(100% + 4rem);
+  height: calc(100% + 4rem);
+  border-radius: 0.5rem;
+  border: 5px solid var(--c_accent);
+  opacity: 0;
+  transition: 0.3s ease-out;
+}
 
-  button:hover:before{
-    width: 100%;
-    height: 100%;
-    opacity: 1;
-    border-color: white;
-  }
+button:hover:before{
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  border-color: white;
+}
 
 a{
   margin: 0px 15px;
@@ -208,6 +216,7 @@ p{
   font-size: 2rem;
   margin-left: 1em;
   line-height: 1.5;
+  margin-top: 1rem;
 }
 
 .info_container{
@@ -216,7 +225,7 @@ p{
   flex-wrap: wrap;
   background: linear-gradient(color-mix(in hsl, var(--c_bg), var(--c_bg2) 50%), color-mix(in hsl, var(--c_bg), var(--c_bg2) 100%));
 
-  margin-top: 2rem;
+  margin: 2rem 2rem;
 }
 
 .list_container{
@@ -238,21 +247,27 @@ p{
 }
 
 ul{
-  width: 50%;
+  width: calc(50% - 1em);
   list-style-type: disc;
   font-size: 1.5rem;
   line-height: 2;
+  margin-left: 1em;
+  margin-top: 1rem;
 }
 
 .accessibility_text{
   font-size: 3em;
-  color: white;
+  color: var(--c_accent);
   text-align: center;
 }
 
 .accessibility_container{
   padding: 2rem;
   margin: 3rem 10rem;
-  background-color: gray;
+  background: linear-gradient(color-mix(in hsl, var(--c_bg), var(--c_bg2) 50%), color-mix(in hsl, var(--c_bg), var(--c_bg2) 100%));
   text-shadow: 0px 0px black;
+}
+
+footer{
+  background-color: gray;
 }
