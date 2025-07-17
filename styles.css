@@ -3,7 +3,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  /* border: 1px solid red; */
+  border: 1px solid red;
 }
 
 *{
@@ -50,7 +50,7 @@ body {
   color: white;
 }
 
-#kanji_container{
+.name_container{
   display: flex;
   flex-direction: column;
   float: left;
@@ -58,7 +58,7 @@ body {
   text-shadow: 10px 10px 5px #000;
 }
 
-.kanji_name{
+.name_container h1{
   font-size: 15em;
 
   writing-mode: vertical-lr;
@@ -66,7 +66,7 @@ body {
   margin: 0px;
 }
 
-.english_name{
+.name_container h3{
   color: var(--c_accent);
   float: left;
   font-size: 2rem;
@@ -208,7 +208,11 @@ h2{
   margin-bottom: 0px;
 }
 
-.unskewed{
+.header_box h2{
+  transform: skew(var(--skew-angle));
+}
+
+.header_box h1{
   transform: skew(var(--skew-angle));
 }
 
@@ -228,40 +232,51 @@ p{
   margin: 2rem 2rem;
 }
 
-.list_container{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  line-height: 1.5; 
-  margin: 0 1rem;
-}
-
 .text_container{
   flex: 3;
   min-width: 37rem;
 }
 
-.info_visuals{
+.info_container img{
   height: 360px;
   width: auto;
 }
 
-ul{
+.accessibility .list_container{
+  justify-content: space-around;
+}
+
+.list_container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  line-height: 1.5;
+  margin-top: 1rem; 
+  margin: 0 1rem;
+}
+
+.info_container ul{
+  margin-left: 2rem;
+}
+
+.info_container ul{
   width: calc(50% - 1em);
+}
+
+ul{
   list-style-type: disc;
   font-size: 1.5rem;
   line-height: 2;
   margin-left: 1em;
-  margin-top: 1rem;
 }
 
-.accessibility_text{
+.accessibility h2{
   font-size: 3em;
   color: var(--c_accent);
   text-align: center;
 }
 
-.accessibility_container{
+.accessibility{
   padding: 2rem;
   margin: 3rem 10rem;
   background: linear-gradient(color-mix(in hsl, var(--c_bg), var(--c_bg2) 50%), color-mix(in hsl, var(--c_bg), var(--c_bg2) 100%));
