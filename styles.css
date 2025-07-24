@@ -40,8 +40,7 @@ body {
 
 h1 {
   color: var(--c_accent);
-  margin-left: 3rem;
-  margin-right: 3rem;
+  margin: 0rem 3rem;
 }
 
 h2 {
@@ -58,9 +57,9 @@ h2 {
 
 p{
   font-size: clamp(1rem, 2vw, 3rem);
-  margin-left: 1em;
   line-height: 1.75;
-  margin-top: 1rem;
+
+  margin: 1rem;
 }
 
 li{
@@ -280,10 +279,12 @@ a:hover {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 0;
-  /* background: linear-gradient(color-mix(in hsl, var(--c_bg), var(--c_bg2) 50%), color-mix(in hsl, var(--c_bg), var(--c_bg2) 100%)); */
+  gap: 1rem;
 
-  margin: 2rem 2rem;
+  padding: 1rem;
+  background: linear-gradient(color-mix(in hsl, var(--c_bg), var(--c_bg2) 50%), color-mix(in hsl, var(--c_bg), var(--c_bg2) 100%));
+
+  margin: 4rem 2rem;
 }
 
 .text_container {
