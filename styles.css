@@ -45,22 +45,29 @@ h1 {
 }
 
 h2 {
-  font-size: 3em;
-  padding: 0px;
-  margin: 0.5em;
-  line-height: 0;
+  font-size: clamp(1rem, calc(3vw), 4rem);
+  margin: 0;
+
+  line-height: 1;
+  padding: 0.5rem;
 
   color: var(--c_accent);
   font-style: italic;
   text-shadow: 4px 4px color-mix(in hsl, var(--c_accent), #0f0000 85%);
 }
 
-p {
-  font-size: 2rem;
+p{
+  font-size: clamp(1rem, 2vw, 3rem);
   margin-left: 1em;
-  line-height: 1.5;
+  line-height: 1.75;
   margin-top: 1rem;
 }
+
+li{
+  font-size: clamp(1rem, 2vw, 3rem);
+  flex: 0 0 auto;
+}
+
 
 /* #endregion */
 
@@ -160,7 +167,7 @@ button {
 
 button:hover {
   box-shadow: 10px 10px 10px #000;
-  transform: translateY(-10px);
+  transform: translateY(-5px);
   background-color: var(--c_accent);
   color: white;
   border: 4px solid white;
@@ -216,7 +223,6 @@ button:hover:before {
 .links_container {
   font-size: 1rem;
   display: inline-grid;
-  margin-bottom: -10px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 1rem 0.5rem;
@@ -243,7 +249,7 @@ a:hover {
 /* #endregion */
 
 
-/* #region header box */
+/* #region header text box */
 .header_box {
   display: inline-block;
   background: linear-gradient(to right, #000000ae, #00000034);
@@ -274,19 +280,20 @@ a:hover {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  background: linear-gradient(color-mix(in hsl, var(--c_bg), var(--c_bg2) 50%), color-mix(in hsl, var(--c_bg), var(--c_bg2) 100%));
+  gap: 0;
+  /* background: linear-gradient(color-mix(in hsl, var(--c_bg), var(--c_bg2) 50%), color-mix(in hsl, var(--c_bg), var(--c_bg2) 100%)); */
 
   margin: 2rem 2rem;
 }
 
 .text_container {
-  flex: 3;
-  min-width: 37rem;
+  flex: 2 0 15rem;
+  height: 100%;
 }
 
 .info_container img {
-  height: 360px;
-  width: auto;
+  flex: 1 0 auto;
+  height: 100%;
 }
 
 .info_container ul {
@@ -294,7 +301,11 @@ a:hover {
   width: calc(50% - 1em);
 }
 
+
+
+
 /* #endregion*/
+
 
 /* #region <---------MEDIA GALLERY---------> */
 #slider{
@@ -473,15 +484,20 @@ a:hover {
   flex-direction: row;
   flex-wrap: nowrap;
   line-height: 1.5;
-  margin-top: 1rem;
-  margin: 0 1rem;
+  margin: 1rem 1rem 0px 1rem;
 }
 
 ul {
   list-style-type: disc;
-  font-size: 1.5rem;
-  line-height: 2;
+  /* font-size: 1.5rem; */
+  /* line-height: 2; */
   margin-left: 1em;
+
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem 0px;
+  height: 100%;
 }
 
 .accessibility h2 {
@@ -499,4 +515,32 @@ ul {
 
 footer {
   background-color: gray;
+}
+
+@media (max-width: 700px){
+  .info_container {
+    flex-direction: column-reverse;
+  }
+
+  .info_container.reverse{
+    flex-direction: column;
+  }
+
+  .info_container img {
+    width: 100%;
+    height: 100%;
+  }
+
+  h2 {
+    font-size: max(6vw, 3rem);
+  }
+
+  p{
+    font-size: 1.5rem;
+  }
+
+  li{
+    font-size: 1.5rem;
+  }
+
 }
