@@ -2,6 +2,7 @@
 <html>
 <head><!-- #region -->
     <meta charset="UTF-8" />
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
     <title>GRAND GUN DRAGON</title>
 
     <link rel="stylesheet" href="styles.css" />
@@ -25,58 +26,62 @@
             </div> 
         </div>
         
-        <span class = "header_box" id = "hero_header"><h1>ARE YOU READY?</h1></span>
+        <span class = "header_box" id = "hero_span"><h1 class = "hero_header">ARE YOU READY?</h1></span>
 
-        <p class = "hero_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi voluptate libero tempora laudantium voluptatem voluptates consequatur, laborum inventore autem, est consectetur labore necessitatibus?</p>
+        <p class = "hero_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi voluptate libero tempora laudantium voluptatem voluptates consequatur</p>
         
-        <a href="https://google.com"><button><span class = "button">CHECK OUT</span></button></a>
+        <div class = "action_container">
+            <a href="https://google.com" class = "hero_button"><span class = "button">CHECK OUT</span></a>
+                
+            <span class = "header_box"><div class ="links_container unskew"><!-- #region links -->
+                    <h4>Available on!</h4>
+
+                    <a href="https://google.com">Steam <i class="bi bi-steam"></i></a>
+                    
+                    <a href="https://google.com">Crazy Games <i class="bi bi-steam"></i></a>
+
+                    <a href="https://google.com">Itch.io <i class="bi bi-steam"></i></a>
+                </div><!-- #endregion --></span>
+        </div>
         
-        <div class ="links_container"><!-- #region links -->
-            <a>Available on!</a>
 
-            <a href="https://google.com">Steam <i class="bi bi-steam"></i></a>
-
-            <a href="https://google.com">Itch.io <i class="bi bi-steam"></i></a>
-            
-            <a href="https://google.com">Crazy Games <i class="bi bi-steam"></i></a>
-        </div><!-- #endregion -->
         
         <div id = "fade"></div>
     </header><!-- #endregion -->
     
     <main>
         <!-- #region information section -->
-        <div class = "info_container"><!-- #region a-->
+        <section class = "info_container"><!-- #region a-->
             <img src = "gameplay.gif" alt = "a video of gameplay" width = "240" height = "135">
             <div class = "text_container">
                 <span class = "header_box"><h2>DOGE AND DESTROY</h2></span>
                 <p>Doge through large amounts of enemy bullets while you destroy powerfull enemie units. go through the main mission destroying enemie bases and powerfull boss units, can you be the one to save them?</p>
             </div>
-        </div><!-- #endregion -->
+        </section><!-- #endregion -->
         
-        <div class = "info_container reverse"><!-- #region b -->
-            <div class = "text_container">
+        <section class = "info_container reverse"><!-- #region b -->
+            <!-- <div class = "text_container">
                 <span class = "header_box"><h2>GAMEPLAY CONTENT</h2></span>   
                 <div class = "list_container">
                     <ul><li>Stages: 5+</li><li>Bosses: 6+</li><li>Loops: 2</li><li>Secrets: ?</li></ul>
                     <ul><li>Ships: 4</li><li>Missions: 2</li><li>Arrange modes: 2</li><li>Training levels 64</li></ul>
                 </div>
             </div>
-            <img src = "tanks.jpg" alt = "some tanks" width = "240" height = "135">
-        </div><!-- #endregion -->
+            <img src = "tanks.jpg" alt = "some tanks" width = "240" height = "135"> -->
+        </section><!-- #endregion -->
 
-        <div class = "info_container"><!-- #region c -->
+        <section class = "info_container"><!-- #region c -->
             <img src = "test.jpg" alt = "some enemies" width = "240" height = "135">
             
             <div class = "text_container">
-                <span class = "header_box"><h2>HYPER MODE SYSTEM</h2></span>
+                <span class = "header_box"><h2>ENTER HYPER MODE</h2></span>
                 <p>Build up hyper gauge and activate to enter hyper mode and superchrage your weapons with the drawback of your sene of time going hyper too. Entering hyper can cause you to enter secret bossfights and stages</p>
             </div>
-        </div><!-- #endregion -->
+        </section><!-- #endregion -->
         <!-- #endregion -->
         
         <!-- #region gallery -->
-        <div id = "slider">
+        <!-- <div id = "slider">
             <input type="radio" name="slider" id = "slide1" checked>
             <input type="radio" name="slider" id = "slide2">
             <input type="radio" name="slider" id = "slide3">
@@ -127,11 +132,11 @@
                 <label for = "slide4"></label>
             </div>
 
-        </div>
+        </div> -->
         <!-- #endregion -->
 
         <!-- #region accessibility info -->
-        <div class = "accessibility">
+        <!-- <section class = "accessibility">
             <h2>Accessibility features<i class="bi bi-universal-access"></i></h2>
             <div class = "list_container">
                 <ul style = "font-size: 2rem;">
@@ -151,8 +156,9 @@
                     <li>feature</li>
                 </ul>
             </div>
-        </div>
+        </section> -->
         <!-- #endregion -->
+    
     </main>
 
     <footer>
@@ -166,11 +172,10 @@
             <a href="https://google.com">Crazy Games <i class="bi bi-steam"></i></a>
         </div><!-- #endregion -->
 
-        <p>contant me at seiya</p>
-
-        <p>please dont steal my website copy right</p>
+        <!-- <p class = "footer_text">大銃龍 GRAND GUN DRAGON</p>
+        <p class = "footer_text">contant me at seiya.unknown@gmail.com</p>
+        <p class = "footer_text">the placeholder images are not mine they are from devilblade</p> -->
     </footer>
-
 
 </body>
 </html>
