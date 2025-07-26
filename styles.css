@@ -99,7 +99,6 @@ header {
   background: url("banner.jpg") no-repeat;
   background-size: cover;
   height: auto;
-  padding: 1rem 1vw;
   padding-bottom: 0rem;
   /* padding-bottom: 10rem; */
   display: inline-block;
@@ -109,6 +108,7 @@ header {
 
 /* #region name container */
 .name_container {
+  margin-left: 1vw;
   display: flex;
   flex-direction: column;
   float: left;
@@ -286,7 +286,7 @@ header {
 
 
 .itch{
-  background-image: url(https://static.itch.io/images/itchio-textless-var(--c_text).svg);
+  background-image: url(https://static.itch.io/images/itchio-textless-white.svg);
 }
 
 .crazy_games{
