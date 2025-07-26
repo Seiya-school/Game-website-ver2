@@ -75,6 +75,11 @@ html, body {
   overflow-x: hidden;
 }
 
+iframe{
+  aspect-ratio: 16 / 9;
+  height: 100%;
+}
+
 /* #endregion */
 
 
@@ -253,6 +258,17 @@ header {
   color: #6f7fb5;
 }
 
+.itch_icon{
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  background-image: url(https://static.itch.io/images/itchio-textless-white.svg);
+  background-color: #6f7fb569;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+}
+
 .links_container a:hover {
   color: white;
   transform: translateY(-1px);
@@ -319,9 +335,11 @@ header {
   height: 100%;
 }
 
-.info_container img {
+.info_container img, .info_container iframe{
   flex: 1 0 auto;
   height: 100%;
+  border: none;
+  aspect-ratio: 16/9;
 }
 
 
