@@ -310,7 +310,7 @@ header {
   padding: 1rem;
   background: linear-gradient(color-mix(in hsl, var(--c_bg), var(--c_bg2) 50%), color-mix(in hsl, var(--c_bg), var(--c_bg2) 100%));
 
-  margin: 4rem min(2rem, 10vw);
+  margin: 4rem min(2rem, 5vw);
 }
 
 .text_container {
@@ -551,7 +551,7 @@ footer {
 
 
 
-@media only screen and (max-width: 1000px){
+@media (max-width: 800px){
   .info_container {
     flex-direction: column-reverse;
     align-items: center;
@@ -582,7 +582,16 @@ footer {
 
 }
 
-@media only screen and (max-width: 600px){
+@media (max-width: 600px){
+
+  h2 {
+    font-size: max(7vw, 1.5rem);
+    margin: 0px;
+  }
+
+  .header_box{
+    margin: 0.5rem 0rem;
+  }
   #hero_span{
     margin-left: 2vw;
   }
@@ -608,3 +617,9 @@ footer {
   }
 }
 
+@media (max-width: 500px) {
+  p{
+    font-size: 1rem;
+    margin: 0;
+  }  
+}
