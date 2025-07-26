@@ -19,6 +19,9 @@
   --c_link: #0d1739;
 
   --skew-angle: 20deg;
+
+  --scroll_width: 480px;
+  --scroll_items: 5;
 }
 
 
@@ -249,6 +252,8 @@ header {
 /* #endregion */
 
 
+
+
 /* #region links */
 .links_container {
   font-size: max(0.4rem, 1vw);
@@ -369,6 +374,79 @@ header {
 
 
 /* #endregion*/
+
+
+.scroll_container {
+  margin: 2rem auto 0;
+  width: 90%;
+  max-width: 1536px;
+  height: 270px;
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+@keyframes scrollLeft {
+  to {
+    left: calc(var(--scroll_width) * -1);
+  }
+}
+
+@keyframes scrollRight {
+  to {
+    right: calc(var(--scroll_width) * -1);
+  }
+}
+
+.itemLeft,
+.itemRight {
+  width: 90%;
+  aspect-ratio: 16 / 9;
+  height: 100%;
+  border-radius: 6px;
+  position: absolute;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+
+.itemLeft {
+  left: max(calc(var(--scroll_width) * var(--scroll_items)), 100%);
+  animation-name: scrollLeft;
+}
+
+
+.itemRight {
+  right: max(calc(var(--scroll_width) * var(--scroll_items)), calc(100% + var(--scroll_width)));
+  animation-name: scrollRight;
+}
+
+.item1 {
+  animation-delay: calc(30s / var(--scroll_items) * (var(--scroll_items) - 1) * -1);
+}
+
+.item2 {
+  animation-delay: calc(30s / var(--scroll_items) * (var(--scroll_items) - 2) * -1);
+}
+
+.item3 {
+  animation-delay: calc(30s / var(--scroll_items) * (var(--scroll_items) - 3) * -1);
+}
+
+.item4 {
+  animation-delay: calc(30s / var(--scroll_items) * (var(--scroll_items) - 4) * -1);
+}
+
+.item5 {
+  animation-delay: calc(30s / var(--scroll_items) * (var(--scroll_items) - 5) * -1);
+}
 
 
 .list_container {
