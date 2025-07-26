@@ -31,7 +31,7 @@
 body {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 600;
+  font-weight: 400;
   font-style: normal;
 
   background: linear-gradient(color-mix(in hsl, var(--c_bg), var(--c_bg2) 5%), color-mix(in hsl, var(--c_bg), var(--c_bg2) 25%));
@@ -330,6 +330,9 @@ header {
 /* #endregion*/
 
 
+
+
+
 /* #region <---------MEDIA GALLERY---------> */
 #slider{
   margin: 0 auto;
@@ -507,7 +510,7 @@ header {
   margin-left: 2rem;
 }
 
-ul {
+.list_container ul {
   list-style-type: disc;
 
   flex: 1;
@@ -518,17 +521,45 @@ ul {
   height: 100%;
 }
 
-.accessibility h2 {
-  font-size: 3em;
-  color: var(--c_accent);
-  text-align: center;
-}
-
-.accessibility {
-  padding: 2rem;
-  margin: 3rem 10rem;
+.accessibility{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4rem min(2rem, 5vw);
   background: linear-gradient(color-mix(in hsl, var(--c_bg), var(--c_bg2) 50%), color-mix(in hsl, var(--c_bg), var(--c_bg2) 100%));
   text-shadow: 0px 0px black;
+}
+
+.centered_list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  line-height: 1.5;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 1rem;
+}
+
+.centered_list ul {
+  margin-left: 2rem;
+  list-style-type: disc;
+
+  align-items: center;
+
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem 0px;
+  height: 100%;
+}
+
+.accessibility h4{
+  font-size: clamp(2rem, 3vw, 4rem);
+}
+
+
+.accessibility ul{
+  line-height: 2;
 }
 
 footer {
@@ -604,11 +635,15 @@ footer {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 530px) {
   li, p{
     font-size: 1rem;
     margin: 0;
   }  
+
+  .accessibility h4{
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 448px) {
@@ -621,7 +656,7 @@ footer {
   
 }
 
-@media (max-width: 350px) {
+@media (max-width: 430px) {
     .list_container{
       flex-direction: column;
       gap: 0.75rem;
@@ -630,5 +665,16 @@ footer {
     li{
       font-size: 1.5rem;
     }
+
+    .accessibility h4{
+      font-size: 2rem;
+    }
 }
 
+
+@media (max-width: 430px) {
+    .centered_list{
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
