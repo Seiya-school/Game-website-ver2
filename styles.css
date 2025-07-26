@@ -61,14 +61,14 @@ h2 {
 }
 
 p{
-  font-size: clamp(1rem, 2vw, 3rem);
+  font-size: clamp(1rem, 2vw, 2rem);
   line-height: 1.75;
 
   margin: 1rem;
 }
 
 li{
-  font-size: clamp(1rem, 2vw, 3rem);
+  font-size: clamp(1rem, 2vw, 2rem);
   flex: 0 0 auto;
 }
 
@@ -404,8 +404,7 @@ header {
   }
 }
 
-.itemLeft,
-.itemRight {
+.itemLeft{
   width: 90%;
   aspect-ratio: 16 / 9;
   height: 100%;
@@ -422,11 +421,6 @@ header {
   animation-name: scrollLeft;
 }
 
-
-.itemRight {
-  right: max(calc(var(--scroll_width) * var(--scroll_items)), calc(100% + var(--scroll_width)));
-  animation-name: scrollRight;
-}
 
 .item1 {
   animation-delay: calc(30s / var(--scroll_items) * (var(--scroll_items) - 1) * -1);
